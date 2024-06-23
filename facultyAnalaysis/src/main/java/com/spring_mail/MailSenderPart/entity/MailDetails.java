@@ -17,8 +17,10 @@ public class MailDetails {
 		this.body = body;
 	}
 	public String getToMail() {
-		return toMail;
-	}
+        System.out.println("nothing");	
+ 	return toMail;
+	
+        }
 	public void setToMail(String toMail) {
 		this.toMail = toMail;
 	}
