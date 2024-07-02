@@ -1,0 +1,12 @@
+.Profile-controller-container h2
+{
+    margin-bottom: 30px;
+    
+}
+.Profile-controller-container{
+    margin-top: 100px;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}

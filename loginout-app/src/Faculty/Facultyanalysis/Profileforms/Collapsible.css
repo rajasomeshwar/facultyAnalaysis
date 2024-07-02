@@ -1,0 +1,45 @@
+.collapsible {
+    background-color: #2c3e50; /* Dark Blue */
+    color: #ecf0f1; /* Light Gray */
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #34495e; /* Slightly lighter dark blue */
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Slightly rounded corners */
+    display: flex;
+    justify-content: space-between; /* Space between text and arrow */
+    align-items: center; /* Center vertically */
+  }
+  
+  .collapsible::after {
+    content: '\25BC'; /* Down arrow */
+    font-size: 13px;
+    color: #ecf0f1;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+  }
+  
+  .active.collapsible::after {
+    transform: rotate(180deg); /* Rotate arrow up */
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #1abc9c; /* Premium Green when active or hovered */
+    color: #ffffff;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #34495e; /* Border to match the button */
+    border-top: none; /* No top border to blend with the button */
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  }
+  

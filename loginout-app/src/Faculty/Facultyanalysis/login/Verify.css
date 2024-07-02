@@ -1,0 +1,80 @@
+.Verify-App {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Verify-App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-container h1 {
+  margin-bottom: 30px;
+  font-family: "Arial", sans-serif;
+  color: #333333;
+  font-size: 24px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container input {
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-container button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.loading-indicator {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #000;
+}

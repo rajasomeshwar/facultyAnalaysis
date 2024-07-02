@@ -1,0 +1,209 @@
+.login-container input[type="number"]::-webkit-inner-spin-button,
+.login-container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.total-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f5f5f5;
+  height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.login-total {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  position: relative;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  background: white;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-sign-up,
+.login-sign-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.login-sign-up {
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.login-sign-in {
+  width: 50%;
+  z-index: 2;
+}
+
+.login-total form {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.login-total h1 {
+  font-weight: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 20px;
+}
+
+.login-container input {
+  background: #eee;
+  padding: 12px 15px;
+  margin: 8px 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.login-container button {
+  color: #fff;
+  background: #1abc9c; /* Premium color */
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 55px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 0px solid black; /* Matching border color */
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container button:active {
+  transform: scale(0.9);
+}
+
+#signIn,
+#signUp {
+  background-color: white;
+  color: #1abc9c;
+  /* border: 2px solid #1abc9c; */
+}
+
+.login-container.login-right-panel-active .login-sign-in {
+  transform: translateX(100%);
+}
+
+.login-container.login-right-panel-active .login-sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.login-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.login-container.login-right-panel-active .login-overlay-container {
+  transform: translateX(-100%);
+}
+
+.login-overlay {
+  position: relative;
+  color: #fff;
+  background: #1abc9c; /* Premium background color */
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  background: #1abc9c; /* Premium background color */
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.login-container.login-right-panel-active .login-overlay {
+  transform: translateX(50%);
+}
+
+.login-overlay-right,
+.login-overlay-left {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.login-overlay-left {
+  transform: translateX(-20%);
+}
+
+.login-overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.login-container.login-right-panel-active .login-overlay-left {
+  transform: translateX(0);
+}
+
+.login-container.login-right-panel-active .login-overlay-right {
+  transform: translateX(20%);
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}

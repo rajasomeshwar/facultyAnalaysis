@@ -1,0 +1,64 @@
+/* ContributionForm.css */
+body.contribution-form-body {
+    background-color: #f0f0f0;
+}
+
+.contribution-form-container {
+    padding: 50px;
+    background-color: white;
+    margin: 20px auto;
+    transition: 0.3s;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.contribution-form-container input {
+    padding: 8px;
+    margin: 5px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.actions-container-contribution {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.actions-container-contribution button:last-child {
+    margin-left: 40px;
+}
+
+
+.actions-contributiontodepartment button {
+    background-color: #1abc9c;
+    color: white;
+    border: 2px solid #16a085;
+    border-radius: 4px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actions-contributiontodepartment button:hover {
+    background-color: #16a085;
+    color: #ffffff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.actions-contributiontodepartment button:active {
+    background-color: #148f77;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+.actions-contributiontodepartment button:focus {
+    outline: none;
+}
