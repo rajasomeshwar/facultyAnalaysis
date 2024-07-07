@@ -52,13 +52,23 @@ function LoginComponent() {
     event.preventDefault();
     const operation = event.target.operation.value;
     if (operation === "signup") {
-      const signupSuccess = await authContext.signup({
-        username,
-        email,
-        password,
-        mobileNumber,
-        department,
-      });
+      const data = {
+        username: email,
+        password: password,
+        mobilenumber: "" + mobileNumber,
+        data: {
+          id: 0,
+          name: username,
+          joining_date: null,
+          department: "hi",
+          designation: null,
+          teachingexperience: 0,
+          industryexperience: 0,
+          total_experience: 0,
+        },
+      };
+      console.log(data);
+      const signupSuccess = await authContext.signup(data);
 
       if (signupSuccess) {
         //toast.success("Account Created");
@@ -70,7 +80,7 @@ function LoginComponent() {
         //   toast.error("Username or email already exists");
       }
     } else if (operation === "login") {
-      const loginSuccess = await authContext.login(username, password);
+      const loginSuccess = await authContext.login(email, password);
       //  console.log(loginSuccess);
       if (loginSuccess) {
         console.log("login");
@@ -153,8 +163,8 @@ function LoginComponent() {
                 name="email"
                 placeholder="Email"
                 required
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="password"

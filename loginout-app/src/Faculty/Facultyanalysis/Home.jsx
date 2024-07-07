@@ -16,7 +16,7 @@ import TeachingPerformanceTable from "./faculty/AcademicworkForm";
 function AuthenticationRouter({ children }) {
   const auth = useAuth();
 
-  if (auth.isAuthenticated) return children;
+  if (auth.isTokenValid) return children;
   return <Navigate to="/" />;
 }
 export default function FacultyAnalysisHome() {
@@ -35,9 +35,7 @@ export default function FacultyAnalysisHome() {
             <Route path="/table" element={<TeachingPerformanceTable />}>
               {" "}
             </Route>
-            <Route path="/profile" element={<Profile />}>
-              {" "}
-            </Route>
+
             <Route path="/verify" element={<OtpInput />}>
               {" "}
             </Route>
@@ -71,12 +69,25 @@ export default function FacultyAnalysisHome() {
               {" "}
             </Route>
             <Route
+              path="/tablesdata"
+              element={
+                <>
+                  <HeaderComponent />
+                  <AuthenticationRouter>
+                    <WelcomeComponent />
+                  </AuthenticationRouter>
+                </>
+              }
+            >
+              {" "}
+            </Route>
+            <Route
               path="/profile"
               element={
                 <>
                   <HeaderComponent />
                   <AuthenticationRouter>
-                    <TodoComponent />
+                    <Profile />
                   </AuthenticationRouter>
                 </>
               }
